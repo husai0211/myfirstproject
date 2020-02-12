@@ -1,0 +1,34 @@
+
+
+https://server.zzidc.com/fwqrj/1107.html
+Windows下连接Linux的ssh工具有哪些
+作为一个Windows操作系统用户，如果想要连接Linux服务器来进行文件之间的传送，那么需要一个Secure Shell软件（简称SSH的）。实际上，SSH是一个网络协议，允许通过网络连接到Linux和Unix服务器。SSH使用公钥加密来认证远程的计算机。通常有多种途径使用SSH，自动连接或是使用密码认证登录。
+ssh工具有哪些
+小编为大家搜集整理了几种可以连接Linux服务器（还么有Linux服务器的，请点击这里，49元噢）的ssh工具：
+1.putty
+Putty是最有名的SSH和telnet客户端，由Simon Tatham为Windows平台开发。Putty是一款开源软件，提供可用的源代码并有一批志愿者进行开发和支持。
+ssh工具有哪些
+Putty易于安装和使用，通常大部分的配置选项不需要修改。用户只需要输入少量基本的参数，可以开始很简单地建立连接会话。
+2.Bitvise SSH Client
+Bitvise SSH是一款支持SSH和SFTP的Windows客户端。由Bitvise开发和提供专业支持。这款软件工具性能突出，易于安装、便于使用。Bitvise SSH客户端拥有功能丰富的图形界面，通过自动重连功能的内置代理进行动态端口转发。
+ssh工具有哪些
+据了解，Bitvise SSH客户端对个人用户使用是免费的，同时对于在内部的个人商业使用同样免费。
+3.MobaXterm
+MobaXterm是远程计算的工具箱。在 单独一个Windows应用里，MobaXterm为程序员、网站管理员、IT管理员及其它用户提供了远程操作一揽子功能。
+ssh工具有哪些
+另外，MobaXterm提供了所有重要的远程网络工具（如SSH、X11、RDP、VNC、FTP、MOSH等），以及Windows 桌面上的Unix命令（bash、ls、cat、sed、grep、awk、rsync等），这些均是由一个开箱即用的单一的便携可执行文件提供，并对个人使用免费。
+4.DameWare SSH
+DameWare SSH是的免费SSH客户端。该免费工具是一个终端模拟器，可以从一个易用的控制台建立多个telnet和SSH连接。
+ssh工具有哪些
+将常用的会话保存在 Windows 文件系统中
+使用多套保存的证书来轻松登录不同的设备
+使用telnet、SSH1和SSH2协议连接计算机和设备
+5.SmarTTY
+SmarTTY是一款免费的多标签SSH客户端，支持使用SCP命令随时复制文件和目录。
+ssh工具有哪些
+SSH服务器每个连接支持最多10个子会话.SmarTTY在做得：没有多个窗口，不需要重新登录，仅打开一个新的标签页可以。
+6.Cygwin
+Cygwin 是一款GNU和开源工具的集合，提供类似一个Windows平台下Linux的功能。 
+ssh工具有哪些
+Cygwin包括一个称为模拟库的Unix系统：cygwin.dll，集成大量GNU和其它免费软件。在安装包中，有高质量的编译器和其他软件开发工具、一个X11服务器、一套完整的X11开发套件、GNU emacs编辑器、Tex和LaTeX、openSSH（客户端和服务器），此外还包括在Windows下需要编译和使用PhysioToolkit软件的所有。
+通过以上工具介绍，哪一款SSH工具值得用户尝试，可以根据需求和喜好来选择。如果有另外的SSH工具列举，可以进一步留言补充。
