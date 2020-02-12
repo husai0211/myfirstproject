@@ -1,5 +1,10 @@
 拷贝地址
 再在命令行里执行curl [拷贝的地址] | bash就可以了
+如下所示
 
-
-curl [https://raw.githubusercontent.com/husai0211/myfirstproject/master/shell_add.sh] | bash
+[root@localhost Documents]# curl https://raw.githubusercontent.com/husai0211/myfirstproject/master/shell_add.sh | bash
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100    59  100    59    0     0     41      0  0:00:01  0:00:01 --:--:--    41
+this is 10+20 :30
+[root@localhost Documents]# 
