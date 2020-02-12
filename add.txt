@@ -1,0 +1,5 @@
+拷贝地址
+再在命令行里执行curl [拷贝的地址] | bash就可以了
+
+
+curl [https://raw.githubusercontent.com/husai0211/myfirstproject/master/shell_add.sh] | bash
