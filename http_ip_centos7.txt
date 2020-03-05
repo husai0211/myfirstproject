@@ -1,0 +1,96 @@
+
+
+    博客园
+    首页
+    新随笔
+    联系
+    管理
+    订阅
+    订阅
+
+随笔- 77  文章- 2  评论- 4 
+CentOS 7 配置 http 服务器
+
+一、http单域名访问
+
+　　1、安装软件： yum -y install httpd
+
+　　2、启动服务：systemctl  start httpd
+
+　　3、设置开机启动： systemctl enable httpd
+
+　　4、创建index.html ： touch  /var/www/html/index.html
+
+　　5、在index.html里添加内容test : echo "test" >/var/www/html/index.html
+
+　　6、将 http 服务添加到防火墙： firewall-cmd  --permanent --add-rich-rule='rule family=ipv4 source address=10.0.0.0/24 service name=http accept'
+
+　　7、重新加载防火墙： firewall-cmd --reload
+
+　　8、创建httpd-vhosts.conf： vim /etc/httpd/conf.d/httpd-vhosts.conf
+
+　　9、在httpd-vhosts.conf添加如下内容：
+
+　　　　<VirtualHost *:80>
+
+　　　　　　DocumentRoot  /var/www/html
+
+　　　　　　ServerName  www.test.com
+
+　　　　　　ServerAlias  test.com
+
+　　　　</VirtualHost>
+
+　　10、重启http服务：systemctl restart httpd
+
+　　11、在/etc/hosts里添加如下内容：
+
+　　　　10.0.0.20  www.test.com
+
+　　　　10.0.0.20  test.com
+
+　　12、完成以上步骤上即可实现域名访问，linux域名访问命令： curl  www.test.com
+
+ 
+
+二、多域名访问
+
+　　1、建立新目录： mkdir  /var/www/private
+
+　　2、创建index.html文件并添加内容 orange： echo "orange"  >/var/www/private/index.html
+
+　　3、在httpd-vhosts.conf里添加如下内容：
+
+　　　　<VirtualHost *:80>
+
+　　　　　　DocumentRoot  /var/www/private
+
+　　　　　　ServerName  www.private.com
+
+　　　　　　ServerAlias  private.com
+
+　　　　</VirtualHost>
+
+　　4、重启httpd服务： systemctl  restart httpd
+
+　　5、在/etc/hosts里添加如下内容： 
+
+　　　　10.0.0.20 www.private.com
+
+　　　　10.0.0.20 private.com
+
+ 
+
+三、只允许指定IP访问，在httpd-vhosts.conf里添加如下内容：
+
+　　<Directory /var/www/private>
+
+　　　　require  ip 10.0.0.21　　　　　　// “require  local  allow” 表示只允许本机访问，“require ip 10.0.0.0/24” 则表示允许0段网络访问
+
+　　　　require all  denied　　　　　　　// 此项为默认设置，有无均可
+
+　　</Directory>
+
+ 
+
+PS ： 如局域网内没做DNS，则需要添加http服务器里的hosts文件里的相同内容到访问电脑的hosts文件里

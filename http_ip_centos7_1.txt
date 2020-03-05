@@ -1,0 +1,6 @@
+https://blog.csdn.net/Inite/article/details/73658214?depth_1-utm_source=distribute.pc_relevant.none-task&utm_source=distribute.pc_relevant.none-task
+
+
+https://www.cnblogs.com/jefflee168/p/6403500.html
+
+这两个文章解决访问阿里云ECS服务器ping通但不能访问
